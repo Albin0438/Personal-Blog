@@ -93,24 +93,31 @@ header {
   color: #3182ce; /* Vibrant azure blue accent */
 }
 
-nav {
+nav ul {
   display: flex;
   flex-wrap: wrap;
+  list-style: none; /* Strips the default browser bullets */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px; /* Moves the spacing to the list items */
 }
 
 nav a {
-  margin-left: 20px;
   text-decoration: none;
-  color: #4a5568; /* Highly readable dark charcoal text for inactive links */
+  color: #4a5568; 
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
   transition: 0.2s;
+  display: inline-block;
 }
 
 nav a:hover,
 nav a.active {
-  color: #3182ce; /* Electric light blue active state */
+  color: #3182ce; 
 }
 
 nav a.active::before {
