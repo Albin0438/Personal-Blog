@@ -9,13 +9,12 @@ if (searchInput) {
   searchInput.addEventListener("input", () => {
     const value = searchInput.value.toLowerCase();
 
-    toolCards.forEach(card => {
+    toolCards.forEach((card) => {
       const text = card.textContent.toLowerCase();
       card.style.display = text.includes(value) ? "block" : "none";
     });
   });
 }
-
 
 // ==========================
 // COPY TO CLIPBOARD FUNCTION
@@ -24,7 +23,8 @@ function copyToClipboard(text) {
   if (!text) return;
 
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(text)
+    navigator.clipboard
+      .writeText(text)
       .then(() => alert("Copied to clipboard!"))
       .catch(() => fallbackCopy(text));
   } else {
@@ -49,7 +49,6 @@ function fallbackCopy(text) {
   document.body.removeChild(textarea);
 }
 
-
 // ==========================
 // DARK / LIGHT MODE TOGGLE
 // ==========================
@@ -67,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("light-mode");
   }
 });
-
 
 // ==========================
 // SIMPLE INPUT VALIDATION

@@ -5,14 +5,30 @@
 
 /* Clean Glow System - Transformed to vibrant light blue system alert */
 @keyframes pulseGlow {
-  0% { text-shadow: 0 0 4px #3182ce, 0 0 10px rgba(49, 130, 206, 0.2); }
-  50% { text-shadow: 0 0 8px #3182ce, 0 0 18px rgba(49, 130, 206, 0.4); }
-  100% { text-shadow: 0 0 4px #3182ce, 0 0 10px rgba(49, 130, 206, 0.2); }
+  0% {
+    text-shadow:
+      0 0 4px #3182ce,
+      0 0 10px rgba(49, 130, 206, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 8px #3182ce,
+      0 0 18px rgba(49, 130, 206, 0.4);
+  }
+  100% {
+    text-shadow:
+      0 0 4px #3182ce,
+      0 0 10px rgba(49, 130, 206, 0.2);
+  }
 }
 
 @keyframes scanlineDrop {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 * {
@@ -28,7 +44,9 @@ html {
 
 /* Base Setup */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   background: #f4f8fa;
   color: #000000; /* Pure black text for explicit maximum contrast */
   line-height: 1.6;
@@ -38,7 +56,8 @@ body {
 }
 
 /* Stripped away old matrix screen simulation filters */
-body::before, body::after {
+body::before,
+body::after {
   display: none;
 }
 
@@ -132,7 +151,7 @@ p {
 }
 
 /* Verse Block*/
-.verse{
+.verse {
   margin-bottom: 60px;
   border: 1px solid #bee3f8;
   padding: 30px;
@@ -140,7 +159,7 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(49, 130, 206, 0.05);
 }
-.verse-para{
+.verse-para {
   font-weight: bold;
   text-decoration: underline;
 }
@@ -155,8 +174,8 @@ p {
 
 .btn {
   background: #3182ce; /* Light Blue Action Core */
-  color: #ffffff;      /* Stark white text against bright blue background */
-  font-weight: 900;    
+  color: #ffffff; /* Stark white text against bright blue background */
+  font-weight: 900;
   padding: 10px 20px;
   text-decoration: none;
   font-size: 14px;
@@ -179,7 +198,7 @@ p {
   border: 1px solid #3182ce;
   padding: 10px 20px;
   text-decoration: none;
-  color: #3182ce;          
+  color: #3182ce;
   font-weight: bold;
   font-size: 14px;
   display: inline-block;
@@ -202,7 +221,8 @@ section {
   padding-bottom: 20px;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin-bottom: 20px;
   font-size: 22px;
   color: #000000; /* Complete high contrast black */
@@ -220,7 +240,7 @@ h3 {
 /* PASTEL HIGHLIGHT NOTICES */
 .highlight {
   background: #fff5f5; /* Clean light pink / coral tint */
-  border: 1px solid #fed7d7; 
+  border: 1px solid #fed7d7;
   color: #c53030;
   padding: 20px;
   margin: 30px 0;
@@ -249,17 +269,27 @@ h3 {
   filter: none;
   border-radius: 8px;
   border: 1px solid #cbd5e0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* CARDS AND INTERFACES */
-.projects-grid, .uses-grid, .blog-grid, .links-grid, .tools-grid {
+.projects-grid,
+.uses-grid,
+.blog-grid,
+.links-grid,
+.tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
-.project-card, .use-card, .blog-card, .link-card, .contact-card, .tool-card, .tool-container {
+.project-card,
+.use-card,
+.blog-card,
+.link-card,
+.contact-card,
+.tool-card,
+.tool-container {
   background: #ffffff;
   padding: 25px;
   border: 1px solid #e2e8f0;
@@ -267,7 +297,12 @@ h3 {
   transition: all 0.25s ease;
 }
 
-.project-card:hover, .use-card:hover, .blog-card:hover, .link-card:hover, .tool-card:hover, .tool-container:hover {
+.project-card:hover,
+.use-card:hover,
+.blog-card:hover,
+.link-card:hover,
+.tool-card:hover,
+.tool-container:hover {
   transform: translateY(-2px);
   border-color: #3182ce;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -285,18 +320,30 @@ li {
 }
 
 /* LINKS AND PATHWAYS */
-.project-card a, .blog-card a, .link-card a, footer a, .post a, .project a, .tool-container a, .container a {
-  color: black; 
+.project-card a,
+.blog-card a,
+.link-card a,
+footer a,
+.post a,
+.project a,
+.tool-container a,
+.container a {
+  color: black;
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
 }
 
-.container p a, .tool-container a {
+.container p a,
+.tool-container a {
   color: #2b6cb0;
 }
 
-.project-card a:hover, .blog-card a:hover, .link-card a:hover, .post a:hover, .container a:hover {
+.project-card a:hover,
+.blog-card a:hover,
+.link-card a:hover,
+.post a:hover,
+.container a:hover {
   text-decoration: underline;
   color: #2c5282 !important;
 }
@@ -313,7 +360,9 @@ li {
 }
 
 /* CLEAN UTILITY INPUT FIELDS */
-.search-box, textarea, input {
+.search-box,
+textarea,
+input {
   width: 100%;
   padding: 14px;
   background: #ffffff;
@@ -326,7 +375,9 @@ li {
   transition: all 0.2s ease;
 }
 
-.search-box:focus, textarea:focus, input:focus {
+.search-box:focus,
+textarea:focus,
+input:focus {
   border-color: #3182ce;
   box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
 }
@@ -403,7 +454,7 @@ footer {
   margin: 30px auto;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   filter: none;
   transition: border-color 0.3s ease;
 }
@@ -425,7 +476,10 @@ footer {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   text-align: left;
   background: #ffffff; /* Shifted to full high contrast white */
 }
@@ -481,7 +535,7 @@ code {
   width: fit-content;
   min-width: 240px;
   font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .timeline-node::before {
@@ -554,14 +608,20 @@ code {
   }
   .theme-toggle {
     position: relative;
-    top: 0; right: 0;
+    top: 0;
+    right: 0;
   }
   nav {
     width: 100%;
     gap: 12px;
   }
-  nav a { margin-left: 0; margin-right: 15px; }
-  .hero h1 { font-size: 24px; }
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
 }
 
 /*Page-specific styling fix*/

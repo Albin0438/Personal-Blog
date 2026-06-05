@@ -43,17 +43,15 @@ function rollDice() {
     }
 
     // Dice emoji mapping
-    const diceMap = ["⚀","⚁","⚂","⚃","⚄","⚅"];
-    const emojiResults = results.map(n => diceMap[n - 1]);
+    const diceMap = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+    const emojiResults = results.map((n) => diceMap[n - 1]);
 
     // Display result
-    diceResult.textContent =
-      `Rolls: ${emojiResults.join(" ")}  |  Total: ${total}`;
+    diceResult.textContent = `Rolls: ${emojiResults.join(" ")}  |  Total: ${total}`;
 
     // Re-trigger animation
     diceResult.style.animation = "none";
     diceResult.offsetHeight;
     diceResult.style.animation = "";
-
   }, 400); // delay for rolling effect
 }

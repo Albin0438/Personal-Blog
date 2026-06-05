@@ -1,53 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SOS Game</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SOS Game</title>
 
-  <link rel="icon" href="../favicon/icons8-favicon-48.png">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/simple-style.css">
-  <link rel="stylesheet" href="../css/tools.css">
-
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/simple-style.css" />
+    <link rel="stylesheet" href="../css/tools.css" />
   </head>
-<body>
+  <body>
+    <header>
+      <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
 
-<header>
-  <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../setup.html">Setup</a></li>
+          <li><a href="../links.html">Links</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../tools.html">Toolkit</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../setup.html">Setup</a>
-    <a href="../links.html">Links</a>
-    <a href="../gallery.html">Gallery</a>
-    <a href="../tools.html">Toolkit</a>
-  </nav>
-</header>
+    <div class="tool-container">
+      <a href="../games.html">← Back</a>
 
-<div class="tool-container">
-  <a href="../games.html">← Back</a>
+      <!-- Mode Selection -->
+      <div class="button-group" id="modeGroup">
+        <button onclick="selectMode(this, 'pvp')">1 vs 1</button>
+        <button onclick="selectMode(this, 'ai')">Vs Computer</button>
+        <button onclick="selectMode(this, 'team')">2 vs 2</button>
+      </div>
 
-  <!-- Mode Selection -->
-  <div class="button-group" id="modeGroup">
-    <button onclick="selectMode(this, 'pvp')">1 vs 1</button>
-    <button onclick="selectMode(this, 'ai')">Vs Computer</button>
-    <button onclick="selectMode(this, 'team')">2 vs 2</button>
-  </div>
+      <p>Mode: <span id="modeLabel">1 vs 1</span></p>
+      <p>Turn: <span id="turn">S</span></p>
 
-  <p>Mode: <span id="modeLabel">1 vs 1</span></p>
-  <p>Turn: <span id="turn">S</span></p>
+      <!-- Game Grid -->
+      <div id="grid"></div>
 
-  <!-- Game Grid -->
-  <div id="grid"></div>
+      <div class="button-group">
+        <button onclick="resetGame()">Restart</button>
+      </div>
 
-  <div class="button-group">
-    <button onclick="resetGame()">Restart</button>
-  </div>
+      <p id="result"></p>
+    </div>
 
-  <p id="result"></p>
-</div>
-
-<script src="../js/sos.js"></script>
-</body>
+    <script src="../js/sos.js"></script>
+  </body>
 </html>

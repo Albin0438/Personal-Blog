@@ -1,84 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <title>BMI Calculator - Free Online Tool</title>
-  <meta name="description" content="Calculate your Body Mass Index (BMI) instantly with this free online BMI calculator. Quick and easy health check.">
+    <!-- SEO -->
+    <title>BMI Calculator - Free Online Tool</title>
+    <meta
+      name="description"
+      content="Calculate your Body Mass Index (BMI) instantly with this free online BMI calculator. Quick and easy health check."
+    />
 
-  <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="icon" href="../favicon.png" type="image/png" />
 
-  <link rel="icon" href="../favicon/icons8-favicon-48.png">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/simple-style.css">
-  <link rel="stylesheet" href="../css/tools.css">
-
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/simple-style.css" />
+    <link rel="stylesheet" href="../css/tools.css" />
   </head>
-<body>
+  <body>
+    <header>
+      <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
 
-<header>
-  <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
+      <nav>
+        <ul>
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../setup.html">Setup</a></li>
+          <li><a href="../links.html">Links</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../tools.html">Toolkit</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <nav>
-    <a href="../index.html" class="active">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../setup.html">Setup</a>
-    <a href="../links.html">Links</a>
-    <a href="../gallery.html">Gallery</a>
-    <a href="../tools.html">Toolkit</a>
-  </nav>
-</header>
+    <main class="tool-container">
+      <a href="../index.html">← Back to Home</a>
 
-<main class="tool-container">
+      <p>
+        This free BMI calculator helps you estimate your body mass index based
+        on your weight and height. Useful for basic health awareness.
+      </p>
 
-  <a href="../index.html">← Back to Home</a>
+      <label for="weight">Weight (kg)</label>
+      <input
+        type="number"
+        id="weight"
+        placeholder="Enter weight"
+        aria-label="Weight in kilograms"
+      />
 
-  <p>
-    This free BMI calculator helps you estimate your body mass index based on
-    your weight and height. Useful for basic health awareness.
-  </p>
+      <label for="height">Height (cm)</label>
+      <input
+        type="number"
+        id="height"
+        placeholder="Enter height"
+        aria-label="Height in centimeters"
+      />
 
-  <label for="weight">Weight (kg)</label>
-  <input 
-    type="number" 
-    id="weight" 
-    placeholder="Enter weight"
-    aria-label="Weight in kilograms"
-  >
+      <button onclick="calculateBMI()">Calculate BMI</button>
 
-  <label for="height">Height (cm)</label>
-  <input 
-    type="number" 
-    id="height" 
-    placeholder="Enter height"
-    aria-label="Height in centimeters"
-  >
+      <div class="output">
+        <p>BMI: <span id="bmiResult">0</span></p>
+        <p>Status: <span id="bmiStatus">-</span></p>
+      </div>
+    </main>
 
-  <button onclick="calculateBMI()">Calculate BMI</button>
+    <footer>
+      <div class="footer-icons">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
 
-  <div class="output">
-    <p>BMI: <span id="bmiResult">0</span></p>
-    <p>Status: <span id="bmiStatus">-</span></p>
-  </div>
+      <p>© 2026 Albin Jose- Personal blog. All rights reserved.</p>
+    </footer>
 
-</main>
-
-<footer>
-
-
-  <div class="footer-icons">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="support.html">Support</a>
-  </div>
-
-  <p>© 2026 Albin Jose- Personal blog. All rights reserved.</p>
-</footer>
-
-<!-- Scripts -->
-<script src="../tools.js"></script>
-<script src="../js/bmi.js"></script>
-
-</body>
+    <!-- Scripts -->
+    <script src="../tools.js"></script>
+    <script src="../js/bmi.js"></script>
+  </body>
 </html>

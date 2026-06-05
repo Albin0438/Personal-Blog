@@ -1,53 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudoku</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
 
-  <link rel="icon" href="../favicon/icons8-favicon-48.png">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/simple-style.css">
-  <link rel="stylesheet" href="../css/tools.css">
-
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/simple-style.css" />
+    <link rel="stylesheet" href="../css/tools.css" />
   </head>
-<body>
+  <body>
+    <header>
+      <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
 
-<header>
-  <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../setup.html">Setup</a></li>
+          <li><a href="../links.html">Links</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../tools.html">Toolkit</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../setup.html">Setup</a>
-    <a href="../links.html">Links</a>
-    <a href="../gallery.html">Gallery</a>
-    <a href="../tools.html">Toolkit</a>
-  </nav>
-</header>
+    <div class="tool-container">
+      <a href="../games.html">← Back</a>
 
-<div class="tool-container">
-  <a href="../games.html">← Back</a>
+      <div class="button-group" id="difficultyGroup">
+        <button onclick="selectDifficulty(this, 'easy')">Easy</button>
+        <button onclick="selectDifficulty(this, 'medium')">Medium</button>
+        <button onclick="selectDifficulty(this, 'hard')">Hard</button>
+      </div>
 
-  <div class="button-group" id="difficultyGroup">
-    <button onclick="selectDifficulty(this, 'easy')">Easy</button>
-    <button onclick="selectDifficulty(this, 'medium')">Medium</button>
-    <button onclick="selectDifficulty(this, 'hard')">Hard</button>
-   </div>
+      <p>
+        ⏱️ Time: <span id="timer">0</span>s | ❌ Mistakes:
+        <span id="mistakes">0</span>
+      </p>
 
-  <p>⏱️ Time: <span id="timer">0</span>s | ❌ Mistakes: <span id="mistakes">0</span></p>
+      <div id="sudoku"></div>
 
-  <div id="sudoku"></div>
+      <div class="button-group">
+        <button onclick="checkSudoku()">Check</button>
+        <button onclick="reviewSudoku()">Review</button>
+        <button onclick="resetGame()">Reset</button>
+      </div>
 
-  <div class="button-group">
-    <button onclick="checkSudoku()">Check</button>
-    <button onclick="reviewSudoku()">Review</button>
-    <button onclick="resetGame()">Reset</button>
-</div>
+      <p id="status"></p>
+    </div>
 
-  <p id="status"></p>
-</div>
-
-<script src="../js/sudoku.js"></script>
-</body>
+    <script src="../js/sudoku.js"></script>
+  </body>
 </html>

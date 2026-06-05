@@ -17,7 +17,7 @@ function pickAnswer() {
     { text: "No 👎", type: "no" },
     { text: "Maybe 🤔", type: "maybe" },
     { text: "Definitely yes 🔥", type: "yes" },
-    { text: "Not a great idea 😬", type: "no" }
+    { text: "Not a great idea 😬", type: "no" },
   ];
 
   const random = answers[Math.floor(Math.random() * answers.length)];
@@ -26,7 +26,7 @@ function pickAnswer() {
   answerResult.textContent = `Answer: ${random.text}`;
 
   // Reset + apply class
-  answerResult.className = "output"; 
+  answerResult.className = "output";
   answerResult.classList.add(`answer-${random.type}`);
 
   // Re-trigger animation

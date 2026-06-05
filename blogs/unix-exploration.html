@@ -1,331 +1,454 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Mysterious Exploration on the World of UNIX | Albin Jose</title>
-  <meta name="description" content="The Mysterious Exploration on the World of UNIX">
-  <link rel="icon" href="../favicon/icons8-favicon-48.png">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/simple-style.css">
-</head>
-<body>
-
-<header>
-  <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
-  <nav>
-    <a href="../index.html" class="active">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../setup.html">Uses</a>
-    <a href="../links.html">Links</a>
-    <a href="../gallery.html">Gallery</a>
-    <a href="../tools.html">Toolkit</a>
-  </nav>
-</header>
-
-<main class="container">
-
-  <section class="back-link">
-    <a href="../blog.html">← Back to Blog</a>
-  </section>
-
-  <section class="intro-heading">
-    <h1>The Mysterious Exploration on the World of UNIX</h1>
-    <p class="meta">May 31, 2026 · 5 min read</p>
-    
-    <p>
-      When I first entered the world of Linux, all I had in mind was that Linux was all about commands. 
-      It was never going to be as easy as using Windows. But still, the worst changes to Microsoft Windows, like advertisements across the entire operating system, 
-      the forced sync of user files into their cloud, and user privacy concerns, made me take a look at Linux.
-    </p>
-
-    <p>
-      When I installed it, I knew nothing about Linux at all. Eventually, I realized that <strong>Linux</strong> is just a name for the entire core operating 
-      system and there are various distributions available for various users. So, we are now taking a look at one of the popular and widely used Linux distributions 
-      called <strong>Arch Linux</strong>. Before that,
-    </p>
-  </section>
-
-  <section class="distribution-timeline">
-    <h2>My Linux Distribution Usage Timeline</h2>
-    <div class="timeline">
-      <div class="timeline-node">Linux Mint</div>
-      <div class="timeline-arrow">↓</div>
-      <div class="timeline-node">Fedora Workstation</div>
-      <div class="timeline-arrow">↓</div>
-      <div class="timeline-node">Debian</div>
-      <div class="timeline-arrow">↓</div>
-      <div class="timeline-node">CachyOS</div>
-      <div class="timeline-arrow">↓</div>
-      <div class="timeline-node">EndeavourOS</div>
-      <div class="timeline-arrow">↓</div>
-      <div class="timeline-node">Arch Linux</div>
-    </div>
-  </section>
-
-  <section class="desktop-environments">
-    <h1>Desktop Environments</h1>
-    <p>
-      Desktop environments are the way Linux distributions look—nothing more. There are many popular desktop environments currently used depending on the user's needs. Some of them are:
-    </p>
-    <ul>
-      <li>GNOME</li>
-      <li>KDE Plasma</li>
-      <li>Cinnamon</li>
-      <li>MATE</li>
-      <li>XFCE</li>
-      <li>LXQt</li>
-      <li>Budgie</li>
-      <li>Cosmic</li>
-    </ul>
-  </section>
-
-  <section class="file-systems">
-    <h1>File Systems</h1>
-    <p>
-      A file system is the method and data structure an operating system uses to control how data is stored, organized, named, and retrieved on a storage device like a hard drive or SSD. It acts as the interface between the user and the raw physical storage.
-    </p>
-
-    <dl class="fs-list">
-      <dt><strong>Ext4</strong> (Fourth Extended Filesystem)</dt>
-      <dd>The standard, mature journaling file system for most Linux distributions, prioritizing stability and compatibility for general desktop and server use without built-in advanced data management features.</dd>
-
-      <dt><strong>Btrfs</strong> (B-Tree Filesystem)</dt>
-      <dd>A modern Copy-on-Write (CoW) file system featuring native snapshots, data checksumming for integrity, transparent compression, and built-in RAID, designed for flexible storage management and data protection.</dd>
-
-      <dt><strong>XFS</strong></dt>
-      <dd>A high-performance journaling file system optimized for parallel I/O and massive file sizes, commonly used in enterprise environments where raw throughput and scalability are critical.</dd>
-
-      <dt><strong>ZFS</strong> (Zettabyte File System)</dt>
-      <dd>An enterprise-grade Copy-on-Write file system renowned for maximum data integrity, advanced self-healing capabilities, and powerful volume management, though it requires significant RAM.</dd>
-
-      <dt><strong>F2FS</strong> (Flash-Friendly File System)</dt>
-      <dd>A lightweight file system specifically designed by Samsung for NAND flash memory (SSDs and mobile storage), optimizing performance and wear leveling on flash-based devices.</dd>
-    </dl>
-  </section>
-
-  <section class="comparison-matrix">
-    <h2>Distribution Reference Matrix</h2>
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Distribution</th>
-            <th>Base</th>
-            <th>Package Manager</th>
-            <th>Default Desktop Environment</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Linux Mint</strong></td>
-            <td>Ubuntu LTS (Debian)</td>
-            <td><code>apt</code></td>
-            <td>Cinnamon</td>
-          </tr>
-          <tr>
-            <td><strong>Fedora Workstation</strong></td>
-            <td>Redhat</td>
-            <td><code>dnf</code></td>
-            <td>GNOME</td>
-          </tr>
-          <tr>
-            <td><strong>Debian</strong></td>
-            <td>Debian</td>
-            <td><code>apt</code></td>
-            <td>GNOME</td>
-          </tr>
-          <tr>
-            <td><strong>CachyOS</strong></td>
-            <td>Arch</td>
-            <td><code>pacman</code>, <code>aur</code> (yay, paru)</td>
-            <td>KDE Plasma</td>
-          </tr>
-          <tr>
-            <td><strong>EndeavourOS</strong></td>
-            <td>Arch</td>
-            <td><code>pacman</code>, <code>aur</code> (yay, paru)</td>
-            <td>KDE Plasma</td>
-          </tr>
-          <tr>
-            <td><strong>Arch Linux</strong></td>
-            <td>Arch</td>
-            <td><code>pacman</code>, <code>aur</code> (yay, paru)</td>
-            <td>None (User Choice)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="distro-mint">
-    <h1>Linux Mint</h1>
-    <p>
-      My first choice Linux distribution was <strong>Linux Mint</strong>, which is similar to the Windows user interface because it uses a Desktop 
-      Environment called <strong>Cinnamon</strong>. After using it for about 4 weeks, I faced some touchpad issues on my new laptop. 
-      This made me realize that Linux Mint is based on an LTS version of Ubuntu, so it was built targeting older laptop hardware.
-    </p>
-  </section>
-
-  <section class="distro-fedora">
-    <h1>Fedora Workstation</h1>
-    <p>
-      Then, after some research, I found Fedora Workstation. Fedora was amazing and there are many desktop environments that are officially and 
-      unofficially (spins) supported by the Fedora team. I used it for around 2 months. It was almost perfect, but what made me switch to another distribution was Fedora's heavy dependency on Flatpaks.
-    </p>
-    
-    <h2>Flatpaks</h2>
-    <p>
-      Flatpaks are great; they have their own isolated space to run apps. But I don't like them personally because Flatpaks are huge in size and never 
-      deeply integrated with the operating system when functioning. Some apps show errors and crash when searching for specific files in the file system.
-    </p>
-  </section>
-
-  <section class="distro-hopping">
-    <h1>Distro Hopping</h1>
-    <p>
-      Eventually, this turned into a state of Distro Hopping. I was unable to stay on just one distribution. When staying on one distribution, I thought like, "Oh! That distro was better than this, that distro is more stable than this, so I will get fewer app crashes." 
-      If any error popped up, I assumed the issue was that specific distro. Not only with distributions, but I also had mental fatigue trying to select the best desktop environment. 
-      By trying many distributions, I found that every distro is just based on Debian, Fedora (Redhat), or Arch.
-    </p>
-  </section>
-
-  <section class="distro-debian">
-    <h1>Debian</h1>
-    <p>
-      One of my most stable choices. Updates arrive within a 3-year gap, so their distro stays stable for a long time. Debian has the popular and huge package manager <strong>apt</strong>. 
-      It uses the GNOME DE by default.
-    </p>
-  </section>
-
-  <section class="distro-cachy">
-    <h1>CachyOS</h1>
-    <p>
-      We all know about this one. This distro recently got huge hype for its optimized kernels and packages by default. These optimizations make this distro faster on modern laptops. The distro is mainly focused on gaming. 
-      It also supports all mainstream desktop environments. Personally, I think the most optimized and default DE is KDE Plasma. It has pacman support just like Arch, and the AUR helper yay is installed by default.
-    </p>
-  </section>
-
-  <section class="distro-endeavour">
-    <h1>EndeavourOS</h1>
-    <p>
-      It is another Arch-based distro built to make using Arch easy for newbies. It has many pre-installed tools like yay and a pacman cache manager to make daily driving Arch possible. But still, it is based on the Arch (rolling release) model, and there is a high chance things will break.
-    </p>
-  </section>
-
-  <section class="distro-arch">
-    <h1><strong>Finally: Arch Linux</strong></h1>
-    <p>
-      Last and finally, the ultimate rolling release distribution which gives users full control over what they need on their system. Users can build their environment from the base level. 
-      Arch supports pacman and the AUR (yay, paru), which have the largest collection of apps when compared to all available package managers.
-    </p>
-  </section>
-
-  <section class="package-managers">
-    <h1>Package Managers</h1>
-    <p>
-      A package manager helps us install, upgrade, configure, and remove software programs in a Linux distribution. Each distro has its own package manager, and these are not cross-platform supported unless they are based on the same base distributions.
-    </p>
-    <p>Some popular package managers are:</p>
-
-    <h2>APT</h2>
-    <p>APT (Advanced Package Tool) is the standard package manager for Debian-based systems (Ubuntu, Mint), managing .deb packages with a focus on stability, user-friendliness, and massive repository support.</p>
-
-    <h2>DNF</h2>
-    <p>DNF (Dandified Yum) is the modern default for Red Hat-based systems (Fedora, RHEL 8+), managing .rpm packages with improved speed, memory efficiency, and robust dependency resolution compared to its predecessor YUM.</p>
-
-    <h2>Pacman</h2>
-    <p>Pacman is the lightweight, high-speed package manager for Arch Linux, utilizing simple .pkg.tar.zst archives to facilitate a rolling release model where a single command syncs and upgrades the entire system.</p>
-
-    <h2>AUR</h2>
-    <p>The AUR (Arch User Repository) is a community-driven collection of package descriptions (PKGBUILDs) that allows users to compile and install software not included in the official Arch Linux repositories.</p>
-
-    <h3>Yay</h3>
-    <p>Yay (Yet Another Yogurt) is a popular, stable AUR helper written in Go that mimics pacman syntax to automate the downloading, building, and installation of AUR packages with minimal configuration.</p>
-
-    <h3>Paru</h3>
-    <p>Paru is a modern, high-performance AUR helper written in Rust that enforces mandatory PKGBUILD reviews by default for enhanced security while maintaining full pacman compatibility.</p>
-  </section>
-
-  <section class="installation-guide">
-    <h1>Step-by-Step Installation Guide</h1>
-
-    <ol>
-      <li>
-        <h2>Download and Flash ISO</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Mysterious Exploration on the World of UNIX | Albin Jose</title>
+    <meta
+      name="description"
+      content="The Mysterious Exploration on the World of UNIX"
+    />
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/simple-style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
+      <nav>
         <ul>
-          <li>Download the ISO file from the official <a href="https://archlinux.org">site</a>.</li>
-          <li>Download <a href="https://etcher.balena.io">Balena Etcher</a> and flash the ISO into a USB Drive (4GB+).</li>
-          <li>Restart your computer and press the shortcut to boot into the boot menu (e.g., F12).</li>
-          <li>Choose Arch and boot into it.</li>
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../setup.html">Uses</a></li>
+          <li><a href="../links.html">Links</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../tools.html">Toolkit</a></li>
         </ul>
-        <p>You will be presented with a terminal screen. First, you have to connect to the internet. I am going to show you how to connect to a wireless network like Wi-Fi.</p>
-      </li>
+      </nav>
+    </header>
 
-      <li>
-        <h2>Connect to Internet</h2>
+    <main class="container">
+      <section class="back-link">
+        <li><a href="../blog.html">← Back to Blog</a></li>
+      </section>
+
+      <section class="intro-heading">
+        <h1>The Mysterious Exploration on the World of UNIX</h1>
+        <p class="meta">May 31, 2026 · 5 min read</p>
+
+        <p>
+          When I first entered the world of Linux, all I had in mind was that
+          Linux was all about commands. It was never going to be as easy as
+          using Windows. But still, the worst changes to Microsoft Windows, like
+          advertisements across the entire operating system, the forced sync of
+          user files into their cloud, and user privacy concerns, made me take a
+          look at Linux.
+        </p>
+
+        <p>
+          When I installed it, I knew nothing about Linux at all. Eventually, I
+          realized that <strong>Linux</strong> is just a name for the entire
+          core operating system and there are various distributions available
+          for various users. So, we are now taking a look at one of the popular
+          and widely used Linux distributions called
+          <strong>Arch Linux</strong>. Before that,
+        </p>
+      </section>
+
+      <section class="distribution-timeline">
+        <h2>My Linux Distribution Usage Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-node">Linux Mint</div>
+          <div class="timeline-arrow">↓</div>
+          <div class="timeline-node">Fedora Workstation</div>
+          <div class="timeline-arrow">↓</div>
+          <div class="timeline-node">Debian</div>
+          <div class="timeline-arrow">↓</div>
+          <div class="timeline-node">CachyOS</div>
+          <div class="timeline-arrow">↓</div>
+          <div class="timeline-node">EndeavourOS</div>
+          <div class="timeline-arrow">↓</div>
+          <div class="timeline-node">Arch Linux</div>
+        </div>
+      </section>
+
+      <section class="desktop-environments">
+        <h1>Desktop Environments</h1>
+        <p>
+          Desktop environments are the way Linux distributions look—nothing
+          more. There are many popular desktop environments currently used
+          depending on the user's needs. Some of them are:
+        </p>
         <ul>
-          <li><code>iwctl</code></li>
-          <li><code>device list</code></li>
-          <li><code>station *device-name* get-networks</code></li>
-          <li><code>station *device-name* connect *network-name*</code></li>
-          <li>Type the Wi-Fi password.</li>
-          <li><code>exit</code></li>
+          <li>GNOME</li>
+          <li>KDE Plasma</li>
+          <li>Cinnamon</li>
+          <li>MATE</li>
+          <li>XFCE</li>
+          <li>LXQt</li>
+          <li>Budgie</li>
+          <li>Cosmic</li>
         </ul>
-      </li>
+      </section>
 
-      <li>
-        <h2>archinstall</h2>
-        <ul>
-          <li>Mirror: choose your country</li>
-          <li>Disk config: btrfs -> yes -> compression</li>
-          <li>Swap -> no (yes if you need it)
-            <p>Note: Swap is an area on your storage drive that your computer uses as overflow memory when your main RAM gets full.</p>
-          </li>
-          <li>Bootloader: Grub
-            <p>Note: Grub is stable and mature.</p>
-          </li>
-          <li>Unified Kernel Image (UKI): no
-            <p>Note: Complex for newbies.</p>
-          </li>
-          <li>Removable Location: no</li>
-          <li>Authentication: Set your root password and add a user.</li>
-          <li>Profile: KDE Plasma
-            <p>Note: Choose what you prefer.</p>
-          </li>
-          <li>Applications:
+      <section class="file-systems">
+        <h1>File Systems</h1>
+        <p>
+          A file system is the method and data structure an operating system
+          uses to control how data is stored, organized, named, and retrieved on
+          a storage device like a hard drive or SSD. It acts as the interface
+          between the user and the raw physical storage.
+        </p>
+
+        <dl class="fs-list">
+          <dt><strong>Ext4</strong> (Fourth Extended Filesystem)</dt>
+          <dd>
+            The standard, mature journaling file system for most Linux
+            distributions, prioritizing stability and compatibility for general
+            desktop and server use without built-in advanced data management
+            features.
+          </dd>
+
+          <dt><strong>Btrfs</strong> (B-Tree Filesystem)</dt>
+          <dd>
+            A modern Copy-on-Write (CoW) file system featuring native snapshots,
+            data checksumming for integrity, transparent compression, and
+            built-in RAID, designed for flexible storage management and data
+            protection.
+          </dd>
+
+          <dt><strong>XFS</strong></dt>
+          <dd>
+            A high-performance journaling file system optimized for parallel I/O
+            and massive file sizes, commonly used in enterprise environments
+            where raw throughput and scalability are critical.
+          </dd>
+
+          <dt><strong>ZFS</strong> (Zettabyte File System)</dt>
+          <dd>
+            An enterprise-grade Copy-on-Write file system renowned for maximum
+            data integrity, advanced self-healing capabilities, and powerful
+            volume management, though it requires significant RAM.
+          </dd>
+
+          <dt><strong>F2FS</strong> (Flash-Friendly File System)</dt>
+          <dd>
+            A lightweight file system specifically designed by Samsung for NAND
+            flash memory (SSDs and mobile storage), optimizing performance and
+            wear leveling on flash-based devices.
+          </dd>
+        </dl>
+      </section>
+
+      <section class="comparison-matrix">
+        <h2>Distribution Reference Matrix</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Distribution</th>
+                <th>Base</th>
+                <th>Package Manager</th>
+                <th>Default Desktop Environment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Linux Mint</strong></td>
+                <td>Ubuntu LTS (Debian)</td>
+                <td><code>apt</code></td>
+                <td>Cinnamon</td>
+              </tr>
+              <tr>
+                <td><strong>Fedora Workstation</strong></td>
+                <td>Redhat</td>
+                <td><code>dnf</code></td>
+                <td>GNOME</td>
+              </tr>
+              <tr>
+                <td><strong>Debian</strong></td>
+                <td>Debian</td>
+                <td><code>apt</code></td>
+                <td>GNOME</td>
+              </tr>
+              <tr>
+                <td><strong>CachyOS</strong></td>
+                <td>Arch</td>
+                <td><code>pacman</code>, <code>aur</code> (yay, paru)</td>
+                <td>KDE Plasma</td>
+              </tr>
+              <tr>
+                <td><strong>EndeavourOS</strong></td>
+                <td>Arch</td>
+                <td><code>pacman</code>, <code>aur</code> (yay, paru)</td>
+                <td>KDE Plasma</td>
+              </tr>
+              <tr>
+                <td><strong>Arch Linux</strong></td>
+                <td>Arch</td>
+                <td><code>pacman</code>, <code>aur</code> (yay, paru)</td>
+                <td>None (User Choice)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="distro-mint">
+        <h1>Linux Mint</h1>
+        <p>
+          My first choice Linux distribution was <strong>Linux Mint</strong>,
+          which is similar to the Windows user interface because it uses a
+          Desktop Environment called <strong>Cinnamon</strong>. After using it
+          for about 4 weeks, I faced some touchpad issues on my new laptop. This
+          made me realize that Linux Mint is based on an LTS version of Ubuntu,
+          so it was built targeting older laptop hardware.
+        </p>
+      </section>
+
+      <section class="distro-fedora">
+        <h1>Fedora Workstation</h1>
+        <p>
+          Then, after some research, I found Fedora Workstation. Fedora was
+          amazing and there are many desktop environments that are officially
+          and unofficially (spins) supported by the Fedora team. I used it for
+          around 2 months. It was almost perfect, but what made me switch to
+          another distribution was Fedora's heavy dependency on Flatpaks.
+        </p>
+
+        <h2>Flatpaks</h2>
+        <p>
+          Flatpaks are great; they have their own isolated space to run apps.
+          But I don't like them personally because Flatpaks are huge in size and
+          never deeply integrated with the operating system when functioning.
+          Some apps show errors and crash when searching for specific files in
+          the file system.
+        </p>
+      </section>
+
+      <section class="distro-hopping">
+        <h1>Distro Hopping</h1>
+        <p>
+          Eventually, this turned into a state of Distro Hopping. I was unable
+          to stay on just one distribution. When staying on one distribution, I
+          thought like, "Oh! That distro was better than this, that distro is
+          more stable than this, so I will get fewer app crashes." If any error
+          popped up, I assumed the issue was that specific distro. Not only with
+          distributions, but I also had mental fatigue trying to select the best
+          desktop environment. By trying many distributions, I found that every
+          distro is just based on Debian, Fedora (Redhat), or Arch.
+        </p>
+      </section>
+
+      <section class="distro-debian">
+        <h1>Debian</h1>
+        <p>
+          One of my most stable choices. Updates arrive within a 3-year gap, so
+          their distro stays stable for a long time. Debian has the popular and
+          huge package manager <strong>apt</strong>. It uses the GNOME DE by
+          default.
+        </p>
+      </section>
+
+      <section class="distro-cachy">
+        <h1>CachyOS</h1>
+        <p>
+          We all know about this one. This distro recently got huge hype for its
+          optimized kernels and packages by default. These optimizations make
+          this distro faster on modern laptops. The distro is mainly focused on
+          gaming. It also supports all mainstream desktop environments.
+          Personally, I think the most optimized and default DE is KDE Plasma.
+          It has pacman support just like Arch, and the AUR helper yay is
+          installed by default.
+        </p>
+      </section>
+
+      <section class="distro-endeavour">
+        <h1>EndeavourOS</h1>
+        <p>
+          It is another Arch-based distro built to make using Arch easy for
+          newbies. It has many pre-installed tools like yay and a pacman cache
+          manager to make daily driving Arch possible. But still, it is based on
+          the Arch (rolling release) model, and there is a high chance things
+          will break.
+        </p>
+      </section>
+
+      <section class="distro-arch">
+        <h1><strong>Finally: Arch Linux</strong></h1>
+        <p>
+          Last and finally, the ultimate rolling release distribution which
+          gives users full control over what they need on their system. Users
+          can build their environment from the base level. Arch supports pacman
+          and the AUR (yay, paru), which have the largest collection of apps
+          when compared to all available package managers.
+        </p>
+      </section>
+
+      <section class="package-managers">
+        <h1>Package Managers</h1>
+        <p>
+          A package manager helps us install, upgrade, configure, and remove
+          software programs in a Linux distribution. Each distro has its own
+          package manager, and these are not cross-platform supported unless
+          they are based on the same base distributions.
+        </p>
+        <p>Some popular package managers are:</p>
+
+        <h2>APT</h2>
+        <p>
+          APT (Advanced Package Tool) is the standard package manager for
+          Debian-based systems (Ubuntu, Mint), managing .deb packages with a
+          focus on stability, user-friendliness, and massive repository support.
+        </p>
+
+        <h2>DNF</h2>
+        <p>
+          DNF (Dandified Yum) is the modern default for Red Hat-based systems
+          (Fedora, RHEL 8+), managing .rpm packages with improved speed, memory
+          efficiency, and robust dependency resolution compared to its
+          predecessor YUM.
+        </p>
+
+        <h2>Pacman</h2>
+        <p>
+          Pacman is the lightweight, high-speed package manager for Arch Linux,
+          utilizing simple .pkg.tar.zst archives to facilitate a rolling release
+          model where a single command syncs and upgrades the entire system.
+        </p>
+
+        <h2>AUR</h2>
+        <p>
+          The AUR (Arch User Repository) is a community-driven collection of
+          package descriptions (PKGBUILDs) that allows users to compile and
+          install software not included in the official Arch Linux repositories.
+        </p>
+
+        <h3>Yay</h3>
+        <p>
+          Yay (Yet Another Yogurt) is a popular, stable AUR helper written in Go
+          that mimics pacman syntax to automate the downloading, building, and
+          installation of AUR packages with minimal configuration.
+        </p>
+
+        <h3>Paru</h3>
+        <p>
+          Paru is a modern, high-performance AUR helper written in Rust that
+          enforces mandatory PKGBUILD reviews by default for enhanced security
+          while maintaining full pacman compatibility.
+        </p>
+      </section>
+
+      <section class="installation-guide">
+        <h1>Step-by-Step Installation Guide</h1>
+
+        <ol>
+          <li>
+            <h2>Download and Flash ISO</h2>
             <ul>
-              <li>Bluetooth: yes</li>
-              <li>Audio: pipewire</li>
-              <li>Print: no (if you use a printer, then 'yes')</li>
-              <li>Power management: power-profiles-daemon</li>
-              <li>Firewall: ufw</li>
-              <li>Font: Choose noto and noto-emoji fonts by pressing 'space'</li>
+              <li>
+                Download the ISO file from the official
+                <a href="https://archlinux.org">site</a>.
+              </li>
+              <li>
+                Download
+                <a href="https://etcher.balena.io">Balena Etcher</a> and flash
+                the ISO into a USB Drive (4GB+).
+              </li>
+              <li>
+                Restart your computer and press the shortcut to boot into the
+                boot menu (e.g., F12).
+              </li>
+              <li>Choose Arch and boot into it.</li>
+            </ul>
+            <p>
+              You will be presented with a terminal screen. First, you have to
+              connect to the internet. I am going to show you how to connect to
+              a wireless network like Wi-Fi.
+            </p>
+          </li>
+
+          <li>
+            <h2>Connect to Internet</h2>
+            <ul>
+              <li><code>iwctl</code></li>
+              <li><code>device list</code></li>
+              <li><code>station *device-name* get-networks</code></li>
+              <li><code>station *device-name* connect *network-name*</code></li>
+              <li>Type the Wi-Fi password.</li>
+              <li><code>exit</code></li>
             </ul>
           </li>
-          <li>Network config: default backend</li>
-          <li>Additional applications: choose any apps if you want them preinstalled.
-            <p>Note: It's recommended to install plasma-nm (Wi-Fi functionality) and konsole (terminal).</p>
+
+          <li>
+            <h2>archinstall</h2>
+            <ul>
+              <li>Mirror: choose your country</li>
+              <li>Disk config: btrfs -> yes -> compression</li>
+              <li>
+                Swap -> no (yes if you need it)
+                <p>
+                  Note: Swap is an area on your storage drive that your computer
+                  uses as overflow memory when your main RAM gets full.
+                </p>
+              </li>
+              <li>
+                Bootloader: Grub
+                <p>Note: Grub is stable and mature.</p>
+              </li>
+              <li>
+                Unified Kernel Image (UKI): no
+                <p>Note: Complex for newbies.</p>
+              </li>
+              <li>Removable Location: no</li>
+              <li>Authentication: Set your root password and add a user.</li>
+              <li>
+                Profile: KDE Plasma
+                <p>Note: Choose what you prefer.</p>
+              </li>
+              <li>
+                Applications:
+                <ul>
+                  <li>Bluetooth: yes</li>
+                  <li>Audio: pipewire</li>
+                  <li>Print: no (if you use a printer, then 'yes')</li>
+                  <li>Power management: power-profiles-daemon</li>
+                  <li>Firewall: ufw</li>
+                  <li>
+                    Font: Choose noto and noto-emoji fonts by pressing 'space'
+                  </li>
+                </ul>
+              </li>
+              <li>Network config: default backend</li>
+              <li>
+                Additional applications: choose any apps if you want them
+                preinstalled.
+                <p>
+                  Note: It's recommended to install plasma-nm (Wi-Fi
+                  functionality) and konsole (terminal).
+                </p>
+              </li>
+              <li>Timezone: your timezone</li>
+            </ul>
+            <p>
+              Save it if you want to use it in the future, then click on install
+              -> yes/ok
+            </p>
           </li>
-          <li>Timezone: your timezone</li>
-        </ul>
-        <p>Save it if you want to use it in the future, then click on install -> yes/ok</p>
-      </li>
-    </ol>
-    <p class="arch-installed">Yeah! That's it. Now you can truly enjoy Arch Linux.</p>
-  </section>
-  
+        </ol>
+        <p class="arch-installed">
+          Yeah! That's it. Now you can truly enjoy Arch Linux.
+        </p>
+      </section>
+    </main>
 
-</main>
-
-<footer>
-  <hr>
-  <div class="footer-icons">
-    <a href="../privacy.html">Privacy Policy</a>
-    <a href="../support.html">Support</a>
-  </div>
-  <p>© 2026 Albin Jose - Personal blog. All rights reserved.</p>
-</footer>
-
-</body>
+    <footer>
+      <hr />
+      <div class="footer-icons">
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../support.html">Support</a>
+      </div>
+      <p>© 2026 Albin Jose - Personal blog. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

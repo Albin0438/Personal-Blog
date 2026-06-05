@@ -45,7 +45,6 @@ function generateNumber() {
     }
 
     showResult(`Result: ${num}`, true);
-
   }, 300);
 }
 

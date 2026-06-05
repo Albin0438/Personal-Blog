@@ -21,9 +21,14 @@ let gameOver = false;
 ========================== */
 
 const patterns = [
-  [0,1,2],[3,4,5],[6,7,8],
-  [0,3,6],[1,4,7],[2,5,8],
-  [0,4,8],[2,4,6]
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
 ];
 
 /* ==========================
@@ -91,17 +96,14 @@ function switchTurn() {
 
 function checkSOS() {
   for (let p of patterns) {
-    if (
-      board[p[0]] === "S" &&
-      board[p[1]] === "O" &&
-      board[p[2]] === "S"
-    ) return p;
+    if (board[p[0]] === "S" && board[p[1]] === "O" && board[p[2]] === "S")
+      return p;
   }
   return null;
 }
 
 function isDraw() {
-  return board.every(cell => cell !== "");
+  return board.every((cell) => cell !== "");
 }
 
 function endGame(pattern) {
@@ -111,13 +113,9 @@ function endGame(pattern) {
   let msg = "";
 
   if (mode === "ai") {
-    msg = current === "S"
-      ? "You win 🎉"
-      : "Computer wins 🤖";
+    msg = current === "S" ? "You win 🎉" : "Computer wins 🤖";
   } else if (mode === "team") {
-    msg = current === "S"
-      ? "Team S wins 🎉"
-      : "Team O wins 🎉";
+    msg = current === "S" ? "Team S wins 🎉" : "Team O wins 🎉";
   } else {
     msg = `${current} wins 🎉`;
   }
@@ -130,7 +128,7 @@ function endGame(pattern) {
 ========================== */
 
 function drawLine(pattern) {
-  pattern.forEach(i => {
+  pattern.forEach((i) => {
     grid.children[i].classList.add("sos-win");
   });
 }
@@ -179,9 +177,7 @@ function findBestMove(player) {
 }
 
 function getEmptyCells() {
-  return board
-    .map((v, i) => v === "" ? i : null)
-    .filter(v => v !== null);
+  return board.map((v, i) => (v === "" ? i : null)).filter((v) => v !== null);
 }
 
 /* ==========================
@@ -190,7 +186,7 @@ function getEmptyCells() {
 
 function setActiveButton(groupSelector, clickedButton) {
   const buttons = document.querySelectorAll(groupSelector + " button");
-  buttons.forEach(btn => btn.classList.remove("active"));
+  buttons.forEach((btn) => btn.classList.remove("active"));
   clickedButton.classList.add("active");
 }
 
@@ -203,9 +199,7 @@ function setMode(m) {
   mode = m;
 
   modeLabel.textContent =
-    m === "pvp" ? "1 vs 1" :
-    m === "ai" ? "Vs Computer" :
-    "2 vs 2";
+    m === "pvp" ? "1 vs 1" : m === "ai" ? "Vs Computer" : "2 vs 2";
 
   resetGame();
 }

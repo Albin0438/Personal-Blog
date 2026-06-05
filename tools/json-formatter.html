@@ -1,38 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JSON Formatter</title>
-  <link rel="icon" href="../favicon/icons8-favicon-48.png">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/simple-style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSON Formatter</title>
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/simple-style.css" />
   </head>
-<body>
+  <body>
+    <header>
+      <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
 
-<header>
-  <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
+      <nav>
+        <ul>
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../setup.html">Setup</a></li>
+          <li><a href="../links.html">Links</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../tools.html">Toolkit</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <nav>
-    <a href="../index.html" class="active">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../setup.html">Setup</a>
-    <a href="../links.html">Links</a>
-    <a href="../gallery.html">Gallery</a>
-    <a href="../tools.html">Toolkit</a>
-  </nav>
-</header>
+    <div class="tool-container">
+      <textarea
+        id="jsonInput"
+        rows="10"
+        placeholder="Paste JSON here..."
+      ></textarea>
+      <button onclick="formatJSON()">Format</button>
 
-<div class="tool-container">
-  <textarea id="jsonInput" rows="10" placeholder="Paste JSON here..."></textarea>
-  <button onclick="formatJSON()">Format</button>
+      <textarea
+        id="jsonOutput"
+        rows="10"
+        placeholder="Formatted JSON..."
+        readonly
+      ></textarea>
+    </div>
+  </body>
 
-  <textarea id="jsonOutput" rows="10" placeholder="Formatted JSON..." readonly></textarea>
-</div>
-
-</body>
-
-<script src="../tools.js"></script>
-<script src="../js/json-formatter.js"></script>
-
+  <script src="../tools.js"></script>
+  <script src="../js/json-formatter.js"></script>
 </html>

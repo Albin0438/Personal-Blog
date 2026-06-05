@@ -25,7 +25,7 @@ function toCapitalized() {
 
   output.value = input.value
     .toLowerCase()
-    .replace(/\b\w/g, char => char.toUpperCase());
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
 // Sentence case (improved)
@@ -34,7 +34,7 @@ function toSentenceCase() {
 
   output.value = input.value
     .toLowerCase()
-    .replace(/(^\s*\w|[.!?]\s*\w)/g, char => char.toUpperCase());
+    .replace(/(^\s*\w|[.!?]\s*\w)/g, (char) => char.toUpperCase());
 }
 
 // Clear text

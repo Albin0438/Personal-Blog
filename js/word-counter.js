@@ -25,7 +25,7 @@ function updateCounts() {
   const words = text.trim().split(/\s+/).filter(Boolean);
 
   // Sentence count (basic)
-  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+  const sentences = text.split(/[.!?]+/).filter((s) => s.trim().length > 0);
 
   // Reading time (avg 200 words/min)
   const minutes = words.length / 200;

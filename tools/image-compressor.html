@@ -1,38 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Image Compressor</title>
-  <link rel="icon" href="../favicon/icons8-favicon-48.png">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/simple-style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Compressor</title>
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/simple-style.css" />
   </head>
-<body>
+  <body>
+    <header>
+      <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
 
-<header>
-  <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
+      <nav>
+        <ul>
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../setup.html">Setup</a></li>
+          <li><a href="../links.html">Links</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../tools.html">Toolkit</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <nav>
-    <a href="../index.html" class="active">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../setup.html">Setup</a>
-    <a href="../links.html">Links</a>
-    <a href="../gallery.html">Gallery</a>
-    <a href="../tools.html">Toolkit</a>
-  </nav>
-</header>
+    <div class="tool-container">
+      <input type="file" id="imageInput" />
+      <button onclick="compressImage()">Compress</button>
 
-<div class="tool-container">
-  <input type="file" id="imageInput">
-  <button onclick="compressImage()">Compress</button>
+      <a id="downloadLink" style="display: none">Download</a>
+    </div>
+  </body>
 
-  <a id="downloadLink" style="display:none;">Download</a>
-</div>
-
-</body>
-
-<script src="../tools.js"></script>
-<script src="../js/image-compressor.js"></script>
-
+  <script src="../tools.js"></script>
+  <script src="../js/image-compressor.js"></script>
 </html>

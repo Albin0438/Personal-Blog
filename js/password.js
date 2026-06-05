@@ -72,7 +72,8 @@ function generatePassword() {
 function copyPassword() {
   if (!output.value) return;
 
-  navigator.clipboard.writeText(output.value)
+  navigator.clipboard
+    .writeText(output.value)
     .then(() => alert("Copied!"))
     .catch(() => alert("Failed to copy"));
 }

@@ -5,7 +5,7 @@ function compressImage() {
   const img = new Image();
   const reader = new FileReader();
 
-  reader.onload = e => img.src = e.target.result;
+  reader.onload = (e) => (img.src = e.target.result);
 
   img.onload = () => {
     const canvas = document.createElement("canvas");
@@ -16,15 +16,19 @@ function compressImage() {
 
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-    canvas.toBlob(blob => {
-      const url = URL.createObjectURL(blob);
-      const link = document.getElementById("downloadLink");
+    canvas.toBlob(
+      (blob) => {
+        const url = URL.createObjectURL(blob);
+        const link = document.getElementById("downloadLink");
 
-      link.href = url;
-      link.download = "compressed.jpg";
-      link.style.display = "block";
-      link.textContent = "Download Image";
-    }, "image/jpeg", 0.7);
+        link.href = url;
+        link.download = "compressed.jpg";
+        link.style.display = "block";
+        link.textContent = "Download Image";
+      },
+      "image/jpeg",
+      0.7,
+    );
   };
 
   reader.readAsDataURL(file);
