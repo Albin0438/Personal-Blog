@@ -564,7 +564,7 @@ code {
   .hero h1 { font-size: 24px; }
 }
 
-<!-- Page-specific styling fix -->
+/*Page-specific styling fix*/
 .policy-container {
   max-width: 800px;
   margin: 40px auto;
