@@ -2,7 +2,12 @@
   font-weight: bold;
 }
 
-.debian-logo {
+.distro-logo {
   height: 300px;
   width: 200px;
+}
+
+.fig-caption {
+  text-align: center;
+  font-weight: bold;
 }
