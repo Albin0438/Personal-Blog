@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debian: The Rock Stable Linux Distro. | Albin Jose</title>
+    <meta name="description" content="Debian: The Rock Stable Linux Distro." />
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/simple-style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="../index.html">Albin - Personal Blog</a></div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../setup.html">Uses</a></li>
+          <li><a href="../links.html">Links</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../tools.html">Toolkit</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="back-link">
+        <li><a href="../blog.html">← Back to Blog</a></li>
+      </section>
+
+      <section class="intro-heading">
+        <h1>Debian: The Rock Stable Linux Distro.</h1>
+        <p class="meta">Jun 5, 2026 · 5 min read</p>
+        <br />
+        <h2>What is it?</h2>
+        <p>
+          Debian is a community maintained linux distro. Debian was founded in
+          1993. From that point until now, this distro is well known for it's
+          rock-solid stability and solid sytem updates.
+        </p>
+        <figure>
+          <img
+            class="debian-logo"
+            src="../images/debian.png"
+            alt="Debian logo"
+          />
+        </figure>
+        <p>
+          Many of our favourite and daily driving distros are based on debian.
+          For example,
+        </p>
+        <ol>
+          <li>Ubuntu</li>
+          <li>LMDE (Linux Mint Debian Edition)</li>
+          <li>MXLinux</li>
+          <li>PopOS</li>
+          <li>Kali Linux</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Why I Prefer Debian?</h2>
+        <ul>
+          <li>No flashy updates, stays constant for too long.</li>
+          <li>Default repo contains only truly free and open source apps.</li>
+          <li>No flatpak or snap by default.</li>
+          <li>Simple and easier even for beginners.</li>
+          <li>It is the true foundation of many linux distros.</li>
+          <li>It have the huge number of packages in its repository.</li>
+          <li>
+            Every single service who have a linux application provides .deb
+            packages by default.
+          </li>
+          <li>Less bloat compared to other main stream distros.</li>
+          <li>
+            Users have no control over the installation like arch provides, but
+            still most configs are decently configurable.
+          </li>
+          <li>Default DE is Gnome.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>What are the Downsides?</h2>
+        <ul>
+          <li>Older version of softwares.</li>
+          <li>
+            Because of debians default DE is Gnome, users have to depend on
+            extensions to add more functionality. This is inconvinent when
+            compared to KDE like DE.
+          </li>
+          <li>
+            On a new major update most extensions can be broken but the fixes
+            will be out faster (within a week).
+          </li>
+          <li>Installing proprietary nvidia drivers are hard.</li>
+          <li>
+            If a service not providing a .deb package or debian repo, users have
+            to heavily depend upon flatpaks for that software.
+          </li>
+          <li>
+            Flatpaks are awesome but it have it's own sandboxed area, which
+            leads it to take a decent amount of storage even for a smaller app
+            just because the dependency it needs.
+          </li>
+          <li>Users have to manually enable the non-free repo.</li>
+          <li>
+            Default file system is ext4, which takes 5% of reserved space and
+            users can't utilize the full system storage they have <br />(<strong
+              >Reason:</strong
+            >
+            if in future the complete storage has been consumed, this reserved
+            space will be used to manage the system without lag or crash. In
+            personal computers or laptops, which a user constantly checks
+            storage space, this is an unnecessary feature)
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Supported Desktop Environments</h2>
+        <p>
+          Debian supports many desktop environments and all are stable enough to
+          use as daily drivers. Supported DE's are,
+        </p>
+        <ul>
+          <li>GNOME (Default)</li>
+          <li>KDE Plasma</li>
+          <li>Cinnamon</li>
+          <li>xfce</li>
+          <li>MATE</li>
+          <li>LXDE</li>
+          <li>LXQt</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How to Actually Install Debian?</h2>
+        <p>
+          Installing Debian is easier. All you need is a USB drive or cd then an
+          ISO file from their website. This guide is for netinstall.
+        </p>
+        <br />
+        <h2>Step-by-Step Installation Guide</h2>
+        <ol>
+          <li>
+            Download and flash the netinstall ISO file from
+            <a href="debian.org">Debian</a> official website.
+          </li>
+          <li>
+            Reboot into Boot menu (by pressing F12) and choose your installation
+            medium.
+          </li>
+          <li>Choose 'Graphical install'</li>
+          <li>Select Launguage</li>
+          <li>Select location</li>
+          <li>Configure the keyboard</li>
+          <li>Configure the network</li>
+          <li>Give your computer a name (Hostname)</li>
+          <li>
+            Setup a Root password (if you prefer using
+            <strong>Sudo</strong> instead, skip this)
+          </li>
+          <li>New user full name</li>
+          <li>
+            Choose a username and password for new user (you have to remember it
+            as it is required to login to system)
+          </li>
+          <li>
+            Partiton disks (choose what you prefer, i usually choose 'use entire
+            disk') and choose the disk to partition (<strong>Careful:</strong>
+            never choose your live USB or CD
+          </li>
+          <li>
+            Partitioning scheme: All files in one partition (Recommended for new
+            users)
+          </li>
+          <li>
+            Finish partitioning and write changes to disk (default settings are
+            ok for most users)
+          </li>
+          <li>Write changes to disk ? -> <strong>yes</strong></li>
+          <li>
+            After some time it will ask you to choose a mirror. Country:
+            <strong>your own</strong> (usually faster) -> debian archive mirror:
+            <strong>deb.debian.org</strong> -> HTTP Proxy: <strong>None</strong>
+          </li>
+          <li>Popularity-contest: <strong>no</strong></li>
+          <li>
+            Software selection (choose your DE and utilities):
+            <strong>GNOME</strong> (Default and Stable)
+          </li>
+        </ol>
+      </section>
+      <section>
+        <p>
+          That's it! Just wait until everything get downloaded and reboot to
+          enjoy your new debian distro.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <hr />
+      <div class="footer-icons">
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../support.html">Support</a>
+      </div>
+      <p>© 2026 Albin Jose - Personal blog. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
