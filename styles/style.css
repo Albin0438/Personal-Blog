@@ -169,7 +169,7 @@ p {
 }
 .verse-para {
   font-weight: bold;
-  text-decoration: underline;
+  text-align: right;
 }
 
 /* HIGH-CONTRAST ACTION BUTTONS */
