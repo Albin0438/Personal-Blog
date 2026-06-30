@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debian: The Rock Stable Linux Distro. | Albin Jose</title>
+    <meta name="description" content="Debian: The Rock Stable Linux Distro." />
+    <link rel="icon" href="../favicon/icons8-favicon-48.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style-2.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="index.html">Albin - Personal Blog</a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="back-link">
+        <a href="index.html" class="return-prev"> ↖️ Return to Home</a>
+      </section>
+      <section class="deb-intro">
+        <h1>What is Debian?</h1>
+        <br />
+        <p>
+          Debian is a Linux distribution. It is well known for its rock solid
+          stability. Each release supports about 3 to 5 years without major
+          changes. It stays as it is and proven never break and interrupt user
+          experience like other distribution.
+        </p>
+        <p>
+          Debian have its own package manager called <strong>apt</strong> with
+          more than 60000+ packages. The package manager holds stable versions
+          of many widely used software. When compared to the actual release,
+          Debian packages are 3 to 4 versions behind but ensures its stability.
+        </p>
+      </section>
+      <section class="deb-imp">
+        Note: Execute the commands with <strong>sudo</strong> if you are not a
+        root user. If you are, avoid using <strong>sudo</strong>.
+      </section>
+      <div class="deb-guides">
+        <h2>System Update</h2>
+
+        <code>sudo apt update</code> // <span>search for updates</span><br />
+
+        <code>sudo apt upgrade</code> //
+        <span>done existing updates</span>
+      </div>
+      <br />
+
+      <div class="deb-guides">
+        <h2>System Cleaning</h2>
+        <dl>
+          <dt><code>sudo apt autoclean</code></dt>
+          <dd>automatically cleanup unused dependencies</dd>
+          <dt><code>sudo apt purge libreoffice*</code></dt>
+          <dd>completely remove everything with the keyword 'libreoffice'</dd>
+        </dl>
+      </div>
+      <br />
+      <div class="deb-guides">
+        <h2>System Storage</h2>
+        <dl class="deb-commands">
+          <dt><code>df</code></dt>
+          <dd>disk free in bytes</dd>
+          <dt><code>df -h</code></dt>
+          <dd>disk free in mega-bytes or giga-bytes</dd>
+          <dt><code>du /var/log</code></dt>
+          <dd>disk usage in a specific directory or sub-directory in bytes</dd>
+          <dt><code>du -h /var/log</code></dt>
+          <dd>
+            disk usage in a specific directory or sub-directory in mega-bytes or
+            giga-bytes
+          </dd>
+          <dt><code>du -sh /var/log</code></dt>
+          <dd>a total summary about disk usage in mega-bytes or giga-bytes</dd>
+          <dt><code>du -h /var | sort -hr | head 20</code></dt>
+          <dd>
+            top 20 storage consuming programs listed in reverse order (biggest
+            ithem first) in mega-bytes or giga-bytes
+          </dd>
+          <dt><code>du -h --max-depth=1</code></dt>
+          <dd>
+            runs a deep analysis and calculate total size of current directory
+            and its immediate subdirectories only
+          </dd>
+          <dt><code>find / -type f -size +100M</code></dt>
+          <dd>
+            scans the entire system and find items that exceeds size 100
+            mega-bytes
+          </dd>
+          <dt><code>find . -type f -size +100M</code></dt>
+          <dd>
+            scans currect directory and find items that exceeds size 100
+            mega-bytes
+          </dd>
+        </dl>
+      </div>
+    </main>
+  </body>
+</html>
